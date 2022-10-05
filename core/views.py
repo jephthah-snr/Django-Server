@@ -7,12 +7,10 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 import json
 from django.core.mail import send_mail
-from . models import timetable, blog, event
+from . models import blog, event
 from . forms import StudentRegisterForm as regform
 from . message import student_content
 
-from student_management_app.models import CustomUser, Staffs, Departments, Subjects, Students, SessionYearModel, FeedBackStudent, FeedBackStaffs, LeaveReportStudent, LeaveReportStaff, Attendance, AttendanceReport
-from student_management_app.forms import AddStudentForm, EditStudentForm
 from datetime import date
 
 today = date.today()

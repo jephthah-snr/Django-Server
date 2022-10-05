@@ -1,28 +1,27 @@
 from random import choices
 from django.db import models
-from student_management_app.models import Subjects, CustomUser
 from django.utils import timezone
 # Create your models here.
 
 
-class timetable(models.Model):
-    days = [
-        ('monday','monday'),
-        ('tuesday','tuesday'),
-        ('wednesday','wednesday'),
-        ('thursday','thursday'),
-        ('friday','friday')
-    ]
+# class timetable(models.Model):
+#     days = [
+#         ('monday','monday'),
+#         ('tuesday','tuesday'),
+#         ('wednesday','wednesday'),
+#         ('thursday','thursday'),
+#         ('friday','friday')
+#     ]
 
-    time = models.TimeField()
-    course = models.ForeignKey(Subjects, on_delete = models.CASCADE)
-    day = models.CharField(max_length=30, choices = days, default='Full-time') 
+#     time = models.TimeField()
+#     course = models.ForeignKey(Subjects, on_delete = models.CASCADE)
+#     day = models.CharField(max_length=30, choices = days, default='Full-time') 
 
 
 
 class blog(models.Model):
     title = models.CharField(max_length=50)
-    author = models.ForeignKey(CustomUser, on_delete = models.CASCADE)
+    # author = models.ForeignKey(CustomUser, on_delete = models.CASCADE)
     date_posted = models.DateTimeField(default=timezone.now)
     article = models.TextField()
     image = models.ImageField(blank=True, null=True)
