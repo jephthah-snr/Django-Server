@@ -1,0 +1,272 @@
+
+{% extends 'treemium/base.html' %}
+{% block header %}
+{% load static %}
+        <div class="content-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="card profile_card">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <img class="me-3 rounded-circle me-0 me-sm-3" src="{% static 'main/img/user.jpeg' %}" width="60"
+                                        height="60" alt="">
+                                    <div class="flex-grow-1">
+                                        <h4 class="mb-2">Robert</h4>
+                                        <!-- <p class="mb-1"> <span><i class="fa fa-phone me-2 text-primary"></i></span> +1
+                                            235 5547</p> -->
+                                        <p class="mb-1"> <span><i class="fa fa-envelope me-2 text-primary"></i></span>
+                                            <a href="." class="__cf_email__" data-cfemail="056d6069696a45607d64687569602b666a68">[email&#160;protected]</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <ul class="card-profile__info">
+                                    <li>
+                                        <h5 class="me-4">Address</h5>
+                                        <span class="text-muted">573 Kelly Green St Oviedo FL.</span>
+                                    </li>
+                                    <!-- <li class="mb-1">
+                                        <h5 class="me-4">Total Log</h5>
+                                        <span>103 Time (Today 5 Times)</span>
+                                    </li> -->
+                                    <li>
+                                        <h5 class="text-danger me-4">Last Log</h5>
+                                        <!-- <span class="text-danger">3 February,
+                                            <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+                                                var CurrentYear = new Date().getFullYear()
+                                                document.write(CurrentYear)
+                                            </script>, 10:00 PM -->
+                                            {{last_login}}
+                                        </span>
+                                    </li>
+                                </ul>
+                                <!-- <div class="social-icons">
+                                    <a class="facebook text-center" href="javascript:void(0)"><span><i
+                                                class="fa fa-facebook"></i></span></a>
+                                    <a class="twitter text-center" href="javascript:void(0)"><span><i
+                                                class="fa fa-twitter"></i></span></a>
+                                    <a class="youtube text-center" href="javascript:void(0)"><span><i
+                                                class="fa fa-youtube"></i></span></a>
+                                    <a class="googlePlus text-center" href="javascript:void(0)"><span><i
+                                                class="fa fa-google"></i></span></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-12">
+                                <div class="card profile_card fixed">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <img class="me-3 rounded-circle me-0 me-sm-3" src="{% static 'main/img/shantay.jpeg' %}" width="60"
+                                                height="60" alt="">
+                                            <div class="flex-grow-1">
+                                                <h4 class="mb-2">Shantay R Simoni</h4>
+                                                <!-- <p class="mb-1"> <span><i class="fa fa-phone me-2 text-primary"></i></span> +1
+                                                    235 5547</p> -->
+                                                <p class="mb-1"> <span><i class="fa fa-envelope me-2 text-primary"></i></span>
+                                                    <a href="." class="__cf_email__" data-cfemail="056d6069696a45607d64687569602b666a68">[email&#160;protected]</a>
+                                                </p>
+                                            </div>
+                                        </div>
+        
+                                        <ul class="card-profile__info">
+                                            <li>
+                                                <h5 class="me-4">Address</h5>
+                                                <span class="text-muted">12105 KALISPELL ST BRIGHTON, CO 80603</span>
+                                            </li>
+                                            <!-- <li class="mb-1">
+                                                <h5 class="me-4">Total Log</h5>
+                                                <span>103 Time (Today 5 Times)</span>
+                                            </li> -->
+                                            <li>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="card-title">Direct</h4><br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-12">
+                                        <div class="card profile_card fixed">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1">
+                                                        <div class="card-header" >
+                                                            <span>Direct Wallet Funding</span>
+                                                        </div>
+                                                        <!-- <p class="mb-1"> <span><i class="fa fa-phone me-2 text-primary"></i></span> +1
+                                                            235 5547</p> -->
+                                                        <p class="mb-1" style="color: rgb(0, 89, 255);">Balance</span>
+                                                          <h4 class="mb-1">$ 48,750</h4>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                
+                                                <ul class="card-profile__info">
+                                                    <!-- <li>
+                                                        <h5 class="me-4">Address</h5>
+                                                        <span class="text-muted">12105 KALISPELL ST BRIGHTON, CO 80603</span>
+                                                    </li> -->
+                                                    <!-- <li class="mb-1">
+                                                        <h5 class="me-4">Total Log</h5>
+                                                        <span>103 Time (Today 5 Times)</span>
+                                                    </li> -->
+                                                    <li>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+ 
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="absolute">
+                                <h4 class="card-title">Wallet</h4><br>
+                        <div class="card acc_balance">
+                            <div class="card-header">
+                                <span>3P799pYwY94PstAoGqjXNLQay4g4sgnczj</span>
+                            </div>
+                            <style>
+                                .absolute{
+                                    margin-top: -10rem;
+                                }
+                                .fixed{
+                                    background-color: cadetblue; 
+                                    height: 100px;
+                                }
+                                .item{
+                                    float: right;
+                                }
+                                @media (max-width:800px){
+                                   .absolute{
+                                    margin-top: 0rem;
+                                   }
+                                   .fixed{
+                                    background-color: rgb(160, 159, 95); 
+                                    height: 200px;
+                                }
+                                .item{
+                                    float: left;
+                                }
+                                }
+                            </style>
+                            <div class="card-body">
+                                <span>Available BTC</span>
+                                {% for item in bitcoinbal %}
+                                <h3 class="m-0">{{item.balance}}</h3>
+                                {% endfor %}
+                                <div class="d-flex justify-content-between my-4">
+                                    <div>
+                                        <p class="mb-1">Buy this month</p>
+                                        <h4>3.0215485 BTC</h4>
+                                    </div>
+                                    <div>
+                                        <p class="mb-1">Sell this month</p>
+                                        <h4>3.0215485 BTC</h4>
+                                    </div>
+                                      
+                                </div>
+
+
+
+
+                                
+                                <!-- <div class="btn-group mb-3">
+                                    <button class="btn btn-primary">Sell</button>
+                                    <button class="btn btn-success">Buy</button>
+                                </div> -->
+                                <!-- <div class="card-header">
+                                    <span>3P799pYwY94PstAoGqjXNLQay4g4sgnczj</span>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-body">
+                                    <div>
+                                        <h4 style="color: cadetblue;">George Hernandez</h4><br><br>
+                                        <span>Mutual EB5 Balance</span><br>
+                                        <h3 class="mb-2" style="margin-bottom: 20px;">250,471 USD</h3>   
+                                        </div>     
+                                        <div class="item">
+                                            <h4 style="color: cadetblue;">Robin Farley</h4><br><br>
+                                            <span>Mutual EB5 balance</span><br>
+                                            <h3>104,312 USD</h3>   
+                                            </div>     
+                                    </div>
+                                <!-- <form action="accounts.html">
+                                    <div class="mb-3">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text"><i class="fa fa-money"></i></label>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="5000 USD">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text"><i class="fa fa-bank"></i></label>
+                                            </div>
+                                            <!-- <select class="form-control">
+                                                <option>Bank of America ********45845</option>
+                                                <option>Master Card ***********5458</option>
+                                            </select> --
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-primary w-100">Withdraw Now</button>
+                                </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header border-0">
+                                <h4 class="card-title">All Activities</h4>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="transaction-table">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0 table-responsive-sm">
+                                            <tbody>
+                                                {% for activities in activity %}
+                                                    <tr>
+                                                        <!-- <td><span class="buy-thumb"><i class="la la-arrow-up"></i></span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-success">Buy</span>
+                                                        </td>
+                                                        <td>
+                                                            <i class="cc DASH"></i> DASH
+                                                        </td> -->
+                                                        <td class="cc">
+                                                            {{activities.name}} - {{activities.operation}} - {{activities.date}}
+                                                        </td>
+                                                        <!-- <td class="text-success">{{activity.operation}}</td> -->
+                                                        <!-- <td>{{activities.date}}</td> -->
+                                                    </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,772 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<title>STP - Admin & Dashboard Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+<meta content="" name="author" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- App favicon -->
+<link rel="shortcut icon" href="{% static 'main/assets/images/favicon.ico">
+
+<!-- jvectormap -->
+<link href="../plugins/jvectormap/jquery-jvectormap-2.0.2.css' %}" rel="stylesheet">
+
+<!-- App css -->
+<link href="{% static 'main/assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'main/assets/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'main/assets/css/metisMenu.min.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'main/plugins/daterangepicker/daterangepicker.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'main/assets/css/app.min.css' %}" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="">
+<!-- Left Sidenav -->
+<div class="left-sidenav">
+    <!-- LOGO -->
+    <div class="brand">
+        <a href="index.html" class="logo">
+            <span>
+                <img src="{% static 'main/assets/images/stp.jpeg' %}" alt="logo-small" class="logo-sm" style="height:60px; width: 75px;">
+            </span>
+            <span>
+                <img src="{% static 'main/assets/images/stp.jpeg' %}" alt="logo-large" class="logo-lg logo-light">
+             
+            </span>
+        </a>
+    </div>
+    <!--end logo-->
+    <div class="menu-content h-100" data-simplebar>
+        <ul class="metismenu left-sidenav-menu">
+            <li class="menu-label mt-0">Main</li>
+            <li>
+                <a href="javascript: void(0);"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Dashboard</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                <ul class="nav-second-level" aria-expanded="false">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}"><i class="ti-control-record"></i>Analytics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'matrices' %}"><i class="ti-control-record"></i>Metrices</a></li> 
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript: void(0);"><i data-feather="lock" class="align-self-center menu-icon"></i><span>Authentication</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                <ul class="nav-second-level" aria-expanded="false">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'sign_in' %}"><i class="ti-control-record"></i>Log in</a></li>
+                    <li class="nav-item"><a class="nav-link" href="auth-register.html"><i class="ti-control-record"></i>Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="auth-recover-pw.html"><i class="ti-control-record"></i>Recover Password</a></li>
+                </ul>
+            </li> 
+            <style>
+                @media (max-width:650px){
+                    .menu-content{
+                        visibility: hidden;
+                    }
+                    .metismenu{
+                        visibility: hidden;
+                    }
+                    .left-sidenav{
+                        display: none;
+                    }
+                }
+            </style>
+            <!-- <hr class="hr-dashed hr-menu">
+            <li class="menu-label my-2">Components & Extra</li>
+
+            <li>
+                <a href="javascript: void(0);"><i data-feather="box" class="align-self-center menu-icon"></i><span>UI Kit</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                <ul class="nav-second-level" aria-expanded="false">
+                    <li>
+                        <a href="javascript: void(0);"><i class="ti-control-record"></i>UI Elements <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="ui-alerts.html">Alerts</a></li>                                    
+                            <li><a href="ui-avatar.html">Avatar</a></li>
+                            <li><a href="ui-buttons.html">Buttons</a></li>
+                            <li><a href="ui-badges.html">Badges</a></li>
+                            <li><a href="ui-cards.html">Cards</a></li>
+                            <li><a href="ui-carousels.html">Carousels</a></li>
+                            <li><a href="ui-check-radio.html"><span>Check & Radio</span></a></li>
+                            <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                            <li><a href="ui-grids.html">Grids</a></li> 
+                            <li><a href="ui-images.html">Images</a></li>
+                            <li><a href="ui-list.html">List</a></li>                                   
+                            <li><a href="ui-modals.html">Modals</a></li>
+                            <li><a href="ui-navs.html">Navs</a></li>
+                            <li><a href="ui-navbar.html">Navbar</a></li> 
+                            <li><a href="ui-offcanvas.html">Offcanvas <span class="badge badge-soft-success ms-auto">New</span></a></li> 
+                            <li><a href="ui-paginations.html">Paginations</a></li>   
+                            <li><a href="ui-popover-tooltips.html">Popover & Tooltips</a></li>                                
+                            <li><a href="ui-progress.html">Progress</a></li>
+                            <li><a href="ui-spinners.html">Spinners</a></li>
+                            <li><a href="ui-tabs-accordions.html">Tabs & Accordions</a></li>
+                            <li><a href="ui-toasts.html">Toasts</a></li>
+                            <li><a href="ui-typography.html">Typography</a></li>
+                            <li><a href="ui-videos.html">Videos</a></li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="javascript: void(0);"><i class="ti-control-record"></i>Advanced UI <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="advanced-animation.html">Animation</a></li>
+                            <li><a href="advanced-clipboard.html">Clip Board</a></li>
+                            <li><a href="advanced-highlight.html">Highlight</a></li>
+                            <li><a href="advanced-idle-timer.html">Idle Timer</a></li>
+                            <li><a href="advanced-kanban.html">Kanban</a></li>
+                            <li><a href="advanced-lightbox.html">Lightbox</a></li> 
+                            <li><a href="advanced-nestable.html">Nestable List</a></li>
+                            <li><a href="advanced-rangeslider.html">Range Slider</a></li>
+                            <li><a href="advanced-ratings.html">Ratings</a></li>
+                            <li><a href="advanced-ribbons.html">Ribbons</a></li>
+                            <li><a href="advanced-session.html">Session Timeout</a></li>
+                            <li><a href="advanced-sweetalerts.html">Sweet Alerts</a></li>                                    
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="javascript: void(0);"><i class="ti-control-record"></i>Forms <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="forms-advanced.html">Advance Elements</a></li>
+                            <li><a href="forms-elements.html">Basic Elements</a></li>
+                            <li><a href="forms-editors.html">Editors</a></li>
+                            <li><a href="forms-uploads.html">File Upload</a></li>
+                            <li><a href="forms-repeater.html">Repeater</a></li>
+                            <li><a href="forms-validation.html">Validation</a></li>
+                            <li><a href="forms-wizard.html">Wizard</a></li>
+                            <li><a href="forms-x-editable.html">X Editable</a></li>
+                            
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="javascript: void(0);"><i class="ti-control-record"></i>Charts <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="charts-apex.html">Apex</a></li>
+                            <li><a href="charts-chartjs.html">Chartjs</a></li>
+                            <li><a href="charts-flot.html">Flot</a></li>
+                            <li><a href="charts-morris.html">Morris</a></li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="javascript: void(0);"><i class="ti-control-record"></i>Tables <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="tables-basic.html">Basic</a></li>
+                            <li><a href="tables-datatable.html">Datatables</a></li>
+                            <li><a href="tables-editable.html">Editable</a></li>
+                            <li><a href="tables-responsive.html">Responsive</a></li>
+                            
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="javascript: void(0);"><i class="ti-control-record"></i>Icons <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            
+                            <li><a href="icons-dripicons.html">Dripicons</a></li>
+                            <li><a href="icons-feather.html">Feather</a></li>
+                            <li><a href="icons-fontawesome.html">Font awesome</a></li>
+                            <li><a href="icons-materialdesign.html">Material Design</a></li>
+                            <li><a href="icons-themify.html">Themify</a></li>
+                            <li><a href="icons-typicons.html">Typicons</a></li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="javascript: void(0);"><i class="ti-control-record"></i>Maps <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="maps-google.html">Google Maps</a></li>
+                            <li><a href="maps-leaflet.html">Leaflet Maps</a></li>
+                            <li><a href="maps-vector.html">Vector Maps</a></li>  
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="javascript: void(0);"><i class="ti-control-record"></i>Email Template <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="email-templates-alert.html">Alert Email</a></li>
+                            <li><a href="email-templates-basic.html">Basic Action Email</a></li>                                    
+                            <li><a href="email-templates-billing.html">Billing Email</a></li>
+                        </ul>
+                    </li>   
+                </ul>                        
+            </li>
+
+            <li>
+                <a href="widgets.html"><i data-feather="layers" class="align-self-center menu-icon"></i><span>Widgets</span><span class="badge badge-soft-success menu-arrow">New</span></a>
+            </li> -->
+
+            <!-- <li>
+                <a href="javascript: void(0);"><i data-feather="file-plus" class="align-self-center menu-icon"></i><span>Pages</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                <ul class="nav-second-level" aria-expanded="false">
+                    <li class="nav-item"><a class="nav-link" href="pages-blogs.html"><i class="ti-control-record"></i>Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages-faqs.html"><i class="ti-control-record"></i>FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages-pricing.html"><i class="ti-control-record"></i>Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages-profile.html"><i class="ti-control-record"></i>Profile</a></li>   
+                    <li class="nav-item"><a class="nav-link" href="pages-starter.html"><i class="ti-control-record"></i>Starter Page</a></li>                         
+                    <li class="nav-item"><a class="nav-link" href="pages-timeline.html"><i class="ti-control-record"></i>Timeline</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages-treeview.html"><i class="ti-control-record"></i>Treeview</a></li>
+                </ul>
+            </li>           
+        </ul> -->
+
+        <div class="update-msg text-center">
+            <a href="javascript: void(0);" class="float-end close-btn text-muted" data-dismiss="update-msg" aria-label="Close" aria-hidden="true">
+                <i class="mdi mdi-close"></i>
+            </a>
+          
+            <a href="javascript: void(0);" class="btn btn-outline-warning btn-sm">Stay safe</a>
+        </div>
+    </div>
+</div>
+<!-- end left-sidenav-->
+
+
+<div class="page-wrapper">
+    <!-- Top Bar Start -->
+    <div class="topbar">            
+        <!-- Navbar -->
+        <nav class="navbar-custom">    
+            <ul class="list-unstyled topbar-nav float-end mb-0">  
+                <li class="dropdown hide-phone">
+                    <!-- <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-bs-toggle="dropdown" href="index.html#" role="button"
+                        aria-haspopup="false" aria-expanded="false">
+                        <i data-feather="search" class="topbar-icon"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu dropdown-menu-end dropdown-lg p-0"> -->
+                        <!-- Top Search Bar
+                        <div class="app-search-topbar">
+                            <form action="index.html#" method="get">
+                                <input type="search" name="search" class="from-control top-search mb-0" placeholder="Type text...">
+                                <button type="submit"><i class="ti-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </li>                       -->
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-bs-toggle="dropdown" href="index.html#" role="button"
+                        aria-haspopup="false" aria-expanded="false">
+                        <i data-feather="bell" class="align-self-center topbar-icon"></i>
+                        <span class="badge bg-danger rounded-pill noti-icon-badge">2</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-lg pt-0">
+                    
+                        <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
+                            Notifications <span class="badge bg-primary rounded-pill">2</span>
+                        </h6> 
+                        <div class="notification-menu" data-simplebar>
+                         
+                            {% for notif in notification %}
+                            <!-- item-->
+                            <a href="index.html#" class="dropdown-item py-3">
+                                <small class="float-end text-muted ps-2"><p>{{ notif.time|date:"h:iA" }}</p></small>
+                                <div class="media">
+                                    <div class="avatar-md bg-soft-primary">
+                                        <i data-feather="exclamation" class="align-self-center icon-xs"></i>
+                                    </div>
+                                    <div class="media-body align-self-center ms-2 text-truncate">
+                                        <h6 class="my-0 fw-normal text-dark">{{notif.title}}</h6>
+                                        <small class="text-muted mb-0">{{notif.data}}</small>
+                                    </div><!--end media-body-->
+                                </div><!--end media-->
+                            </a><!--end-item-->
+                      {% endfor %}
+                        <!-- All-->
+                    
+                       
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                  <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-bs-toggle="dropdown" href="{% url 'dashboard' %}" role="button"
+                        aria-haspopup="false" aria-expanded="false">
+                        <span class="ms-1 nav-user-name hidden-sm">Hello!  {{ user.username }}</span>
+                        <img src="{% static 'main/assets/images/users/user.jpeg' %}" alt="profile-user" class="rounded-circle thumb-xs" />                                 
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <!-- <a class="dropdown-item" href="index.html#"><i data-feather="user" class="align-self-center icon-xs icon-dual me-1"></i> Profile</a>
+                        <a class="dropdown-item" href="index.html#"><i data-feather="settings" class="align-self-center icon-xs icon-dual me-1"></i> Settings</a> -->
+                        <div class="dropdown-divider mb-0"></div>
+                        <a class="dropdown-item" href="{% url 'logout' %}"><i data-feather="power" class="align-self-center icon-xs icon-dual me-1"></i> Logout</a>
+                    </div>
+                </li>
+            </ul><!--end topbar-nav-->
+
+            <ul class="list-unstyled topbar-nav mb-0">                        
+                <li>
+                    <img src="{% static 'main/assets/images/stp.jpeg' %}" alt="logo-small" class="logo-sm" style="height:40px; width: 55px; padding-left: 14px;">
+                </li> 
+                <li class="creat-btn">                            
+                </li>                           
+            </ul>
+        </nav>
+        <!-- end navbar-->
+
+
+        <ul class="list-unstyled topbar-nav mb-0">                        
+            <li>
+                <!-- <button class="nav-link button-menu-mobile">
+                    <i data-feather="menu" class="align-self-center topbar-icon"></i>
+                </button> -->
+            </li> 
+            <li class="creat-btn">
+                <div class="nav-link">
+                   
+                </div>                                
+            </li>                           
+        </ul>
+    </nav>
+    </div>
+    <!-- Top Bar End -->
+
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Muli:300,400,700");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Muli", sans-serif;
+  background-color: #F5F6F7;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  padding: 15px 22.5px;
+  margin-bottom: 15px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__icon {
+  width: 20px;
+  height: 20px;
+}
+.navbar__message {
+  display: flex;
+  color: #ACACAC;
+  font-weight: 300;
+  font-size: 12.5px;
+  align-items: center;
+}
+.navbar__count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: #4B8CFA;
+  border-radius: 50%;
+  color: #FFF;
+  width: 22.5px;
+  height: 22.5px;
+  box-shadow: 0px 5px 25px rgba(75, 140, 250, 0.5);
+}
+.navbar__count:hover {
+  cursor: pointer;
+}
+
+.profile {
+  width: 100%;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile__image {
+  width: 55px;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(179, 179, 179, 0.5);
+}
+.profile__info {
+  margin: auto;
+  margin-left: 15px;
+}
+.profile__name {
+  font-size: 17.5px;
+  color: #505050;
+}
+.profile__email {
+  font-size: 13px;
+  color: #ACACAC;
+}
+.profile__icon {
+  width: 20px;
+}
+.profile__icon:hover {
+  cursor: pointer;
+}
+
+.date {
+  color: #ACACAC;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.account {
+  padding: 17.5px 22.5px;
+  box-shadow: 0 10px 50px rgba(179, 179, 179, 0.25);
+  margin-bottom: 20px;
+}
+.account__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.account__money {
+  width: 20px;
+  height: 20px;
+}
+.account__plus {
+  width: 10px;
+  height: 10px;
+}
+.account__plus:hover {
+  cursor: pointer;
+}
+.account__total {
+  font-size: 22.5px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #505050;
+}
+.account__info {
+  font-size: 15px;
+  color: #ACACAC;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu__item {
+  width: 47.5%;
+  height: 65px;
+  margin-right: 5%;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 12.5px;
+  box-shadow: 0 10px 50px rgba(179, 179, 179, 0.25);
+}
+.menu__item:hover {
+  cursor: pointer;
+}
+.menu__item:nth-child(2n+0) {
+  margin: 0;
+}
+.menu__item:nth-last-child(-n+2) {
+  margin-top: 10px;
+}
+.menu__content {
+  font-size: 12.5px;
+  color: #ACACAC;
+  position: relative;
+}
+.menu__content--blue::before {
+  content: "";
+  position: absolute;
+  background: #5E92FA;
+  width: 25px;
+  height: 2px;
+  margin-top: -10px;
+}
+.menu__content--yellow::before {
+  content: "";
+  position: absolute;
+  background: #FFC467;
+  width: 25px;
+  height: 2px;
+  margin-top: -10px;
+}
+.menu__content--salmon::before {
+  content: "";
+  position: absolute;
+  background: #FFA8AB;
+  width: 25px;
+  height: 2px;
+  margin-top: -10px;
+}
+.menu__content--purple::before {
+  content: "";
+  position: absolute;
+  background: #9493FB;
+  width: 25px;
+  height: 2px;
+  margin-top: -10px;
+}
+
+.author {
+  text-decoration: none;
+  font-size: 12.5px;
+}
+.author:link, .author:visited, .author:hover, .author:active {
+  color: #5E92FA;
+}
+
+  </style>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+
+  <!-- Screen Profile -->
+  <div class="screen">
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <!-- Menu Icon -->
+      <!-- <svg class="navbar__icon" enable-background="new 0 0 40 40" version="1.1" viewBox="0 0 40 40" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+	      <g fill="#c6c6c6">
+      		<rect y="7" width="40" height="2"/>
+		      <rect y="19" width="40" height="2"/>
+		      <rect y="31" width="40" height="2"/>
+	      </g>
+      </svg>
+
+      <!-- Messages --
+      <div class="navbar__message" href="#">
+        <p>Messages</p>
+        <span class="navbar__count">12</span>
+      </div> -->
+    </div>
+
+    <!-- User Infos -->
+    <div class="profile">
+      <img class="profile__image" src="{% static 'main/assets/images/users/user.jpeg' %}" style="height: 40px; width: 40px;" alt="User profile image">
+      <div class="profile__info">
+        <p class="profile__name">Robert Coutinho</p>
+        <p class="profile__email">joint account with <a href="{% url 'shantay' %}">Shantay R.</a></p>
+      </div>
+
+      <!-- Menu profile -->
+      <svg class="profile__icon" enable-background="new 0 0 612 612" version="1.1" viewBox="0 0 612 612" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#c6c6c6">
+          <circle cx="69.545" cy="306" r="69.545"/>
+          <circle cx="306" cy="306" r="69.545"/>
+          <circle cx="542.46" cy="306" r="69.545"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Actual Date -->
+    <!-- <div class="date">
+      <p>Monday, 25 September</p>
+    </div> -->
+
+    <!-- Account Balance -->
+    <div class="account">
+
+      <!-- Icons -->
+      <div class="account__header">
+
+        <!-- Money Icon -->
+        <!-- <svg class="account__money" width="402px" height="402px" enable-background="new 0 0 401.998 401.998" version="1.1" viewBox="0 0 401.998 401.998" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <path d="m326.62 91.076c-1.711-1.713-3.901-2.568-6.563-2.568h-48.82c-3.238-15.793-9.329-29.502-18.274-41.112h66.52c2.669 0 4.853-0.856 6.57-2.565 1.704-1.712 2.56-3.903 2.56-6.567v-29.128c0-2.666-0.855-4.853-2.56-6.567-1.719-1.71-3.903-2.569-6.572-2.569h-237.54c-2.666 0-4.853 0.859-6.567 2.568-1.709 1.714-2.568 3.901-2.568 6.567v37.972c0 2.474 0.904 4.615 2.712 6.423s3.949 2.712 6.423 2.712h41.399c40.159 0 65.665 10.751 76.513 32.261h-117.91c-2.666 0-4.856 0.855-6.567 2.568-1.709 1.715-2.568 3.901-2.568 6.567v29.124c0 2.664 0.855 4.854 2.568 6.563 1.714 1.715 3.905 2.568 6.567 2.568h121.92c-4.188 15.612-13.944 27.506-29.268 35.691-15.325 8.186-35.544 12.279-60.67 12.279h-31.977c-2.474 0-4.615 0.905-6.423 2.712-1.809 1.809-2.712 3.951-2.712 6.423v36.263c0 2.478 0.855 4.571 2.568 6.282 36.543 38.828 83.939 93.165 142.18 163.02 1.715 2.286 4.093 3.426 7.139 3.426h55.672c4.001 0 6.763-1.708 8.281-5.141 1.903-3.426 1.53-6.662-1.143-9.708-55.572-68.143-99.258-119.15-131.04-153.03 32.358-3.806 58.625-14.277 78.802-31.404 20.174-17.129 32.449-39.403 36.83-66.811h47.965c2.662 0 4.853-0.854 6.563-2.568 1.715-1.709 2.573-3.899 2.573-6.563v-29.121c0-2.669-0.858-4.856-2.573-6.57z" fill="#40c562"/>
+        </svg> -->
+        <h2 class="profile__icon" style="color: rgb(7, 195, 0); margin-bottom: -20px;">$</h2>
+        <!-- Plus Icon -->
+        <svg class="account__plus" enable-background="new 0 0 42 42" version="1.1" viewBox="0 0 42 42" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="42 19 23 19 23 0 19 0 19 19 0 19 0 23 19 23 19 42 23 42 23 23 42 23" fill="#d8d8d8"/>
+</svg>
+      </div>
+
+      <!-- Balance -->
+      <p class="account__total" style="margin-bottom: -5px;">78,065.3</p>
+      <p class="account__info">Current Balance</p>
+
+
+
+
+    </div>
+
+    <div class="account">
+
+      <!-- Icons -->
+      <div class="account__header">
+
+        <!-- Money Icon -->
+        <!-- <svg class="account__money" width="402px" height="402px" enable-background="new 0 0 401.998 401.998" version="1.1" viewBox="0 0 401.998 401.998" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <path d="m326.62 91.076c-1.711-1.713-3.901-2.568-6.563-2.568h-48.82c-3.238-15.793-9.329-29.502-18.274-41.112h66.52c2.669 0 4.853-0.856 6.57-2.565 1.704-1.712 2.56-3.903 2.56-6.567v-29.128c0-2.666-0.855-4.853-2.56-6.567-1.719-1.71-3.903-2.569-6.572-2.569h-237.54c-2.666 0-4.853 0.859-6.567 2.568-1.709 1.714-2.568 3.901-2.568 6.567v37.972c0 2.474 0.904 4.615 2.712 6.423s3.949 2.712 6.423 2.712h41.399c40.159 0 65.665 10.751 76.513 32.261h-117.91c-2.666 0-4.856 0.855-6.567 2.568-1.709 1.715-2.568 3.901-2.568 6.567v29.124c0 2.664 0.855 4.854 2.568 6.563 1.714 1.715 3.905 2.568 6.567 2.568h121.92c-4.188 15.612-13.944 27.506-29.268 35.691-15.325 8.186-35.544 12.279-60.67 12.279h-31.977c-2.474 0-4.615 0.905-6.423 2.712-1.809 1.809-2.712 3.951-2.712 6.423v36.263c0 2.478 0.855 4.571 2.568 6.282 36.543 38.828 83.939 93.165 142.18 163.02 1.715 2.286 4.093 3.426 7.139 3.426h55.672c4.001 0 6.763-1.708 8.281-5.141 1.903-3.426 1.53-6.662-1.143-9.708-55.572-68.143-99.258-119.15-131.04-153.03 32.358-3.806 58.625-14.277 78.802-31.404 20.174-17.129 32.449-39.403 36.83-66.811h47.965c2.662 0 4.853-0.854 6.563-2.568 1.715-1.709 2.573-3.899 2.573-6.563v-29.121c0-2.669-0.858-4.856-2.573-6.57z" fill="#40c562"/>
+        </svg> -->
+        <h2 class="profile__icon" style="color: rgb(7, 195, 0); margin-bottom: -20px;" >₿</h2>
+        <!-- Plus Icon -->
+        <svg class="account__plus" enable-background="new 0 0 42 42" version="1.1" viewBox="0 0 42 42" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="42 19 23 19 23 0 19 0 19 19 0 19 0 23 19 23 19 42 23 42 23 23 42 23" fill="#d8d8d8"/>
+</svg>
+      </div>
+
+      <!-- Balance -->
+      <p class="account__total" style="margin-bottom: -5px;">0.19680</p>
+      <p class="account__info">Btc Balance</p>
+
+
+
+
+    </div>
+
+
+    <!-- Menu Itens-->
+    <div class="menu">
+      <div class="menu__item">
+        <!-- <img class="profile__image" src="shantay.jpeg" style="height: -20px;" alt="User profile image"> -->
+        <p class="menu__content menu__content--blue">Robin</p>
+        <p style="margin-left: 25px;">$104,000</p>
+      </div>
+      <div class="menu__item">
+        <p class="menu__content menu__content--yellow">George Hernandez</p>
+      </div>
+      <!-- <div class="menu__item">
+        <p class="menu__content menu__content--salmon">Noah Schlutz</p>
+      </div>
+      <div class="menu__item">
+        <p class="menu__content menu__content--purple">Alex mc lovin</p>
+      </div> -->
+    </div>
+
+  </div>
+  <style>
+    .bottom-nav{
+        display: none;
+    }
+    @media (max-width:650px){
+        .menu-content{
+            visibility: hidden;
+        }
+        .metismenu{
+            visibility: hidden;
+        }
+        .left-sidenav{
+            display: none;
+        }
+        .bottom-nav{
+            display: flex;
+        }
+    }
+</style>
+<style>
+    .mobile-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        will-change: transform;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        display: -webkit-box;
+        display: flex;
+        height: 50px;
+        box-shadow: 0 -2px 5px -2px #333;
+        background-color: #fff;
+        }
+        .mobile-bottom-nav__item {
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        text-align: center;
+        font-size: 12px;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        padding-bottom: 4px;
+        }
+        .mobile-bottom-nav__item--active {
+        color: red;
+        }
+        .mobile-bottom-nav__item-content {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        width: 60px;
+        height: 60px;
+        padding-top: 15px;
+        
+        }
+        .message-container{
+          display: flex;
+          justify-content: center;
+          width: 100vw;
+          background-color: rgb(8, 17, 143);
+        }
+        .messages{
+          color: white;
+        }
+        @media (max-width:800px){
+            
+        }
+        </style>
+        <div class="bottom-nav">
+        <nav class="mobile-bottom-nav">
+        <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+        <div class="mobile-bottom-nav__item-content">
+        <a class="a-tags"  title="home" href="{% url 'home' %}">
+            <i class="fas fa-th-large"></i>
+        </div>		
+        </div>
+        <div class="mobile-bottom-nav__item">		
+        <div class="mobile-bottom-nav__item-content">
+        <a class="a-tags" title="transfer funds" href="{% url 'error' %}"><title></title>
+            <i class="fas fa-exchange-alt"></i>
+        </a></div>
+        </div>
+        <div class="mobile-bottom-nav__item">		
+        <div class="mobile-bottom-nav__item-content">
+        <a class="a-tags" title="Data metrices" href="{% url 'matrices' %}"><title>metrices</title>
+            <i class="fas fa-chart-pie"></i>
+        </a></div></div>
+        
+        <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content">
+        <a class="a-tags" href="{% url 'logout' %}" data-tippy-content="@dribble_handle"><title>logout</title>
+            <i class="fas fa-power-off"></i>
+        </a>
+        </div>
+        </div>		
+
+        <div class="mobile-bottom-nav__item">
+            <div class="mobile-bottom-nav__item-content">
+            <a class="a-tags" href="{% url 'robert' %}" data-tippy-content="@dribble_handle"><title>logout</title>
+                <i class="fas fa-user"></i>
+            </a>
+            </div>
+            </div>		
+        </div>
+        </nav>
+        <script>let navItems = document.querySelectorAll(".mobile-bottom-nav__item");
+        navItems.forEach(function(e, i) {
+        e.addEventListener("click", function(e) {
+        navItems.forEach(function(e2, i2) {
+        e2.classList.remove("mobile-bottom-nav__item--active");
+        })
+        this.classList.add("mobile-bottom-nav__item--active");
+        });
+        });</script>
+
+</div>
+<!-- partial -->
+  <style>
+    a{
+      text-decoration: none;
+      color: rgb(63, 63, 63);
+    }
+  </style>
+</body>
+</html>
